@@ -16,6 +16,7 @@ class Router
 
             $url = '';
 
+            // LE CONTROLLER EST INCLUS SELON L'ACTION DE L'UTILISATEUR 
             if (isset($_GET['url'])) {
                 $url = explode('/', filter_var($_GET['url'], FILTER_SANITIZE_URL));
 
@@ -33,6 +34,7 @@ class Router
                 require_once('controllers/ControllerAcceuil.php');
                 $this->_ctrl = new ControllerAcceuil($url);
             }
+            // GESTION DES ERREURS 
         } catch (Exception $e) {
             $errorMsg = $e->getMessage();
             require_once('views/viewError.php');
