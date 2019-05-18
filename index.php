@@ -1,6 +1,9 @@
 <?php 
 
-require("core.php");
+require_once("controllers/Router.php");
+
+$router = new Router();
+$router->routeReq();
 ?>
 
 <!doctype html>
@@ -13,7 +16,7 @@ require("core.php");
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>POO - PHP </title>
+    <title>POO - PHP - MVC </title>
   </head>
   <body>
       <div class="container">
